@@ -108,3 +108,10 @@ Note:
   - -r : recursive.
   - --cached : index-only removal.
   - . : current directory scope.
+
+20) git branch -d feature/branch_name
+- Purpose: Delete a local branch that has already been merged.
+- Flags/options:
+  - -d : safe delete; Git blocks removal if branch is not fully merged.
+- Related option:
+  - -D : force delete (uses -d + --force behavior).
