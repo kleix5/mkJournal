@@ -1,0 +1,1 @@
+select * from marks order by lessons_idlessons asc;

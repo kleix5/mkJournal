@@ -1,0 +1,1 @@
+SELECT name_lastname, idstudent FROM students

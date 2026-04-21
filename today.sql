@@ -1,0 +1,1 @@
+INSERT INTO lessons (today) VALUES(CURDATE())

@@ -1,0 +1,1 @@
+UPDATE marks SET mark = <отметка> WHERE student = <id студента>, today = <id даты>

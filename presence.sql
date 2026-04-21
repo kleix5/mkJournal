@@ -1,0 +1,1 @@
+UPDATE present SET present = <отметка> WHERE student = <id студента>, today = <id даты>
