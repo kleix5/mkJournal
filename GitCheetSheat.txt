@@ -1,0 +1,110 @@
+Git Cheat Sheet (from our chat)
+
+Note:
+- User-dependent names are replaced with placeholders:
+  - feature/branch_name
+  - https://github.com/username/repository_name.git
+
+1) git init
+- Purpose: Initialize a new Git repository in the current folder.
+- Flags/options:
+  - No flags used in our chat.
+
+2) git branch -M main
+- Purpose: Rename current branch to main (force rename if needed).
+- Flags/options:
+  - -M : force-move/rename branch, even if target name exists.
+
+3) git switch -c feature/branch_name
+- Purpose: Create and switch to a new branch.
+- Flags/options:
+  - -c : create a new branch before switching.
+
+4) git add .
+- Purpose: Stage all changes from current directory (and subfolders).
+- Flags/options:
+  - . : pathspec for "current directory".
+
+5) git status
+- Purpose: Show working tree and staging area status.
+- Flags/options:
+  - No flags used in our chat.
+
+6) git commit -m "commit message"
+- Purpose: Create a commit from staged changes.
+- Flags/options:
+  - -m : set commit message inline.
+
+7) git log --oneline --decorate --graph -n 5
+- Purpose: Show compact commit history with refs and graph.
+- Flags/options:
+  - --oneline : one line per commit.
+  - --decorate : show branch/tag pointers.
+  - --graph : ASCII graph of branch structure.
+  - -n 5 : limit output to last 5 commits.
+
+8) git branch --show-current
+- Purpose: Print current branch name.
+- Flags/options:
+  - --show-current : show only current branch.
+
+9) git remote add origin https://github.com/username/repository_name.git
+- Purpose: Add remote repository named origin.
+- Flags/options:
+  - add : add a new remote.
+  - origin : conventional remote name.
+
+10) git remote -v
+- Purpose: Show remotes and their URLs.
+- Flags/options:
+  - -v : verbose output (fetch/push URLs).
+
+11) git switch main
+- Purpose: Switch to existing branch main.
+- Flags/options:
+  - No flags used in our chat.
+
+12) git push -u origin main
+- Purpose: Push branch main and set upstream tracking.
+- Flags/options:
+  - -u : set upstream (so next push/pull can omit remote+branch).
+
+13) git push -u origin feature/branch_name
+- Purpose: Push feature branch and set upstream tracking.
+- Flags/options:
+  - -u : set upstream for this branch.
+
+14) git rm --cached *.rar
+- Purpose: Remove matching files from Git index only (keep on disk).
+- Flags/options:
+  - --cached : untrack file(s) without deleting local copies.
+  - *.rar : wildcard for matching files by extension.
+
+15) git rm --cached *.bak
+- Purpose: Untrack backup files from index only.
+- Flags/options:
+  - --cached : keep files in working directory.
+  - *.bak : wildcard extension match.
+
+16) git rm --cached "*Zone.Identifier"
+- Purpose: Untrack Zone.Identifier stream-like files from index.
+- Flags/options:
+  - --cached : remove only from index.
+  - "*Zone.Identifier" : quoted wildcard pattern.
+
+17) git add .gitignore
+- Purpose: Stage .gitignore changes.
+- Flags/options:
+  - .gitignore : specific file path to stage.
+
+18) git push
+- Purpose: Push commits to configured upstream remote/branch.
+- Flags/options:
+  - No flags used in our chat.
+
+19) git rm -r --cached .
+- Purpose: Remove all tracked files from index recursively (keep local files), usually to re-apply .gitignore.
+- Flags/options:
+  - -r : recursive.
+  - --cached : index-only removal.
+  - . : current directory scope.
